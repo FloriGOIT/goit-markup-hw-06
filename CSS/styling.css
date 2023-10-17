@@ -13,11 +13,12 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
        --heighlight-bgcolor: #404BBF;
        --heighlight-color: white;
        --ro700-s16-lh17: normal normal 700 16px/17px Roboto, sans-serif;
+       --ro400-s12-lh24: normal normal 400 12px/24px Roboto, sans-serif;
        --ro400-s16-lh24: normal normal 400 16px/24px Roboto, sans-serif;
-       --ro500-s20-lh24: normal normal 500 20px/24px Roboto, sans-serif;
        --ro500-s16-lh24: normal normal 500 16px/24px Roboto, sans-serif;
+       --ro500-s20-lh24: normal normal 500 20px/24px Roboto, sans-serif;
        --logo-ra700-s18-lh21: normal normal 800 18px/21px 'Raleway', sans-serif;
-       --color-iris:rgb(77, 90, 229);
+       --color-iris:rgba(77, 90, 229, 1);
        --first-heading: normal normal 700 56px/60px Roboto, sans-serif;
        --second-heading: normal normal 700 36px/40px Roboto, sans-serif;}
 
@@ -358,10 +359,9 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 .footer {display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content:baseline;
+        padding-top: 100px;
         background-color: var(--main-color);
-        letter-spacing: 0.03em;
-        gap: 120px;}
+        letter-spacing: 0.03em;}
 
 .logo-web {color:var(--color-iris);
            text-decoration: none;}
@@ -381,10 +381,10 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
                              flex-direction: row;
                              gap: 10px;
                              margin-bottom: 0;}
-.footer .logo-descriprion {padding-top: 100px;
+.footer .logo-descriprion {
         padding-bottom: 100px;}
-.footer .social {padding-top: 100px;
-                padding-bottom: 128px;}
+.footer .social {padding-bottom: 132px;
+                margin-left: 120px;}
 
 .icons-footer circle {transition-property: color, background-color, box-shadow;
                       transition-duration: 250ms;
@@ -392,6 +392,41 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 
 .icons-footer:focus circle,               
 .icons-footer:hover circle {fill: var(--color-iris);} /*transition*/
+
+.email-footer {margin-left: 80px;
+               padding-bottom: 132px; 
+                width: 453px;}
+.email-footer fieldset{border: none;
+                       padding: 0px;
+                       margin-left: 0px;
+                       margin-right: 0px;}
+.email-footer fieldset legend {color: white;
+                                font: var(--ro500-s16-lh24);
+                                letter-spacing: 0.02em;
+                                margin-bottom: 16px;}
+.email-footer fieldset div {display: flex;
+                            flex-direction: row;}
+.email-footer .subscribe-container input {width: 264px;
+                            padding: 10px 16px;
+                            border: 1px solid rgba(255, 255, 255, 1);
+                            border-radius: 4px;
+                            background-color: var(--main-color);
+                            margin-right: 24px;}
+.subscribe-container input::placeholder {color:rgba(255, 255, 255, 1);
+                                        font: var(--ro400-s12-lh24);
+                                        letter-spacing: 0.04em;}
+.email-footer .email-subscribe {display: flex;
+                                flex-direction:row;
+                                align-items: center;
+                                width: 165px;
+                                padding:8px 24px;
+                                gap: 16px;
+                                background-color: var(--color-iris);
+                                color: white;
+                                font: var(--ro500-s16-lh24);
+                                letter-spacing: 0.04em;
+                                border-radius: 4px;
+                                border-width: 0px;}
 
 /* Modal */
 .modal {position: fixed;
@@ -427,6 +462,3 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 .close-button {background-color: white;
                color: black;
                border: 0px;}
-
-
-
