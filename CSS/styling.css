@@ -478,8 +478,18 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 .modal-container fieldset input {margin-bottom: 8px;
                                 border: 1px solid rgba(46, 47, 66, 0.4);
                                 border-radius: 4px;
-                                height: 40px;}
+                                height: 40px;
+                                transition-property:border-width, border-color;
+                                transition-duration: 250ms;
+                                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                                transition-delay: 0;}
+.modal-container svg>use {transition-property:fill;
+                         transition-duration: 500ms;
+                         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                         transition-delay: 0;}
+
 .modal-container input:focus + svg>use {fill: var(--color-iris);}
+
 .modal-container input:focus,
 .modal-container textarea:focus {border: 2px solid var(--color-iris);
                                 outline: none;}
@@ -497,7 +507,10 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 
 .modal-container fieldset textarea {height: 120px;
                                     border: 1px solid rgba(46, 47, 66, 0.4);
-                                    border-radius: 4px;}
+                                    border-radius: 4px;
+                                    transition-property: border;
+                                    transition-duration: 250ms;
+                                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 .modal-container fieldset textarea::placeholder {padding: 8px 16px;
                                                 color: rgba(46, 47, 66, 0.4);
                                                 font:var(--ro400-s12-lh14);
@@ -516,8 +529,8 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 .modal-container fieldset .checkbox-label a {font:var(--ro400-s12-lh16)}
 
 .modal-container fieldset .checkbox-label input {height: 16px;
-                                                margin-bottom: 0px;
                                                 width: 16px;}
+.modal-container fieldset .checkbox-label p {margin-left: 23px;}
 .checkbox-label input:checked ~.check_color {background-color: var(--color-iris);}
 .check_color:after {
         content: "";
