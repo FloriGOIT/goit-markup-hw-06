@@ -568,7 +568,6 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 
 @keyframes scaleModal {
                 0% {scale: 0;}
-                50% {scale: 0.5;}
                 100% {scale: 1;}}
 
 
