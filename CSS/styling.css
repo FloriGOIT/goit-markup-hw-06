@@ -14,6 +14,8 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
        --heighlight-color: white;
        --ro700-s16-lh17: normal normal 700 16px/17px Roboto, sans-serif;
        --ro400-s12-lh24: normal normal 400 12px/24px Roboto, sans-serif;
+       --ro400-s12-lh14: normal normal 400 12px/14px Roboto, sans-serif;
+       --ro400-s12-lh16: normal normal 400 12px/16px Roboto, sans-serif;
        --ro400-s16-lh24: normal normal 400 16px/24px Roboto, sans-serif;
        --ro500-s16-lh24: normal normal 500 16px/24px Roboto, sans-serif;
        --ro500-s20-lh24: normal normal 500 20px/24px Roboto, sans-serif;
@@ -239,7 +241,6 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 .business-info li {position: relative;
                    margin-bottom: 0px;
                    padding-bottom: 0px;
-                   position: relative;
                    overflow: hidden;}
 
 .business-info li .overlay {position: absolute;
@@ -408,11 +409,11 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
                             flex-direction: row;}
 .email-footer .subscribe-container input {width: 264px;
                             padding: 10px 16px;
-                            border: 1px solid rgba(255, 255, 255, 1);
+                            border: 1px solid rgba(255, 255, 255, 0.3);
                             border-radius: 4px;
                             background-color: var(--main-color);
                             margin-right: 24px;}
-.subscribe-container input::placeholder {color:rgba(255, 255, 255, 1);
+.subscribe-container input::placeholder {color:rgba(255, 255, 255, 0.3);
                                         font: var(--ro400-s12-lh24);
                                         letter-spacing: 0.04em;}
 .email-footer .email-subscribe {display: flex;
@@ -447,11 +448,64 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
                 width: 408px;
                 height: 584px;
                 top: 90px;
-                left: calc(100% - 1470px + 531px);
-                }
+                left: calc(100% - 1470px + 531px);}
+.modal-container {position: absolute;
+                  left: 24px;
+                  top: 72px;
+                  right: 24px;}
+.modal-container fieldset {display: flex;
+                           flex-direction: column;
+                           border: none;
+                           margin-left: 0px;
+                           padding: 0px;}
+.modal-container legend {color: black;
+                        font: var(--ro500-s16-lh24);
+                        letter-spacing: 0.02em;
+                        margin-bottom: 16px;}
+.modal-container fieldset label {margin-bottom: 4px;
+                                width: 360px;
+                                font: var(--ro400-s12-lh14);
+                                letter-spacing: 0.04em;
+                                color: rgba(142, 143, 153, 1);}
+.modal-container fieldset input {margin-bottom: 8px;
+                                border: 1px solid rgba(46, 47, 66, 0.4);
+                                border-radius: 4px;
+                                height: 40px;}
+.modal-container fieldset input:placeholder-shown {padding-left: 40px;}
+.modal-container fieldset #icon_name {position: absolute;
+                                      top: 70px;
+                                      left: 16px;}
+.modal-container fieldset #icon_phone {position: absolute;
+                                        top: 136px;
+                                        left: 16px;}
+.modal-container fieldset #icon_email {position: absolute;
+                                                top: 202px;
+                                                left: 16px;}
 
+.modal-container fieldset textarea {height: 120px;
+                                    border: 1px solid rgba(46, 47, 66, 0.4);
+                                    border-radius: 4px;}
+.modal-container fieldset textarea::placeholder {padding: 8px 16px;
+                                                color: rgba(46, 47, 66, 0.4);
+                                                font:var(--ro400-s12-lh14);
+                                                letter-spacing: 0.04em;}
 
-.is-hidden {visibility: hidden;}
+.modal-container fieldset .checkbox-label {margin-top: 16px;
+                                            margin-bottom: 0px;}
+.modal-container fieldset .checkbox-label a {font:var(--ro400-s12-lh16)}
+
+.modal-container fieldset .checkbox-label input {height: 16px;
+                                                margin-bottom: 0px;}
+.modal-container button {margin:24px 96px;
+                        padding:16px 32px;
+                        width: 169px;
+                        background-color: var(--color-iris);
+                        color: white;
+                        border-width: 0px;
+                        border-radius: 4px;
+                        box-shadow:0 4px 4px 0px rgba(0, 0, 0, 0.15);}
+
+/*.is-hidden {visibility: hidden;}/*
 
 @keyframes scaleModal {
                 0% {scale: 0;}
