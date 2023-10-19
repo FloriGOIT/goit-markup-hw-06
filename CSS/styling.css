@@ -483,16 +483,16 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
                                 transition-duration: 250ms;
                                 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
                                 transition-delay: 0;}
-.modal-container svg>use {transition-property:fill;
+.modal-container svg {transition-property:fill;
                          transition-duration: 250ms;
                          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
                          transition-delay: 0;}
 
-.modal-container input:focus + svg>use {fill: var(--color-iris);}
-
 .modal-container input:focus,
 .modal-container textarea:focus {border: 2px solid var(--color-iris);
-                                outline: none;}
+                                 outline: none;}
+.modal-container input:focus + svg {fill: var(--color-iris);}
+.modal-container textarea:focus::placeholder {color: rgba(77, 90, 229, 0.8);}
 
 .modal-container fieldset input:placeholder-shown {padding-left: 40px;}
 .modal-container fieldset #icon_name {position: absolute;
@@ -514,7 +514,11 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 .modal-container fieldset textarea::placeholder {padding: 8px 16px;
                                                 color: rgba(46, 47, 66, 0.4);
                                                 font:var(--ro400-s12-lh14);
-                                                letter-spacing: 0.04em;}
+                                                letter-spacing: 0.04em;
+                                                transition-property:color;
+                                                transition-duration: 250ms;
+                                                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                                                transition-delay: 0;}
 
 .modal-container fieldset .checkbox-label {display: flex;
                                            flex-direction: row;
@@ -543,7 +547,7 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 .check_color {position: absolute;
             height: 16px;
             width: 16px;
-            background-color: initial;}
+            background-color:initial;}
 .checkbox-label .check_color:after {
                 left: 5.5px;
                 top: 2px;
