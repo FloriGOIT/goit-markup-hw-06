@@ -412,7 +412,8 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
                             border: 1px solid rgba(255, 255, 255, 0.3);
                             border-radius: 4px;
                             background-color: var(--main-color);
-                            margin-right: 24px;}
+                            margin-right: 24px;
+                            outline-color:var(--main-color);}
 .subscribe-container input::placeholder {color:rgba(255, 255, 255, 0.3);
                                         font: var(--ro400-s12-lh24);
                                         letter-spacing: 0.04em;}
